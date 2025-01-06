@@ -1,0 +1,9 @@
+name: flutter_deep_dive
+description: Flutter monorepo managed with melos
+version: 0.0.1
+publish_to: none
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+dev_dependencies:
+  melos: ^6.3.0
