@@ -1,0 +1,22 @@
+name: flutter_deep_dive
+
+packages:
+  - apps/**
+  - packages/**
+
+command:
+  bootstrap:
+    usePubspecOverrides: true
+
+scripts:
+  analyze:
+    run: |
+      melos exec -c 1 -- \
+        dart analyze . --fatal-infos
+    description: Run `dart analyze` in all packages
+
+  test:
+    run: |
+      melos exec -c 1 --dir-exists="test" -- \
+        flutter test --no-pub
+    description: Run `flutter test` in all packages
