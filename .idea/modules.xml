@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/apps/todo/melos_todo.iml" filepath="$PROJECT_DIR$/apps/todo/melos_todo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/packages/todo_domain/melos_todo_domain.iml" filepath="$PROJECT_DIR$/packages/todo_domain/melos_todo_domain.iml" />
       <module fileurl="file://$PROJECT_DIR$/melos_flutter_deep_dive.iml" filepath="$PROJECT_DIR$/melos_flutter_deep_dive.iml" />
     </modules>
   </component>
