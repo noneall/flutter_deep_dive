@@ -1,22 +1,28 @@
-# start-emulator.bat
 @echo off
-
-set DEFAULT_AVD=Pixel_7_Pro_API_35
-
-if exist .env (
-    for /f "tokens=1,2 delims==" %%G in (.env) do set %%G=%%H
-)
-
-if not defined AVD_NAME set AVD_NAME=%DEFAULT_AVD%
+setlocal enabledelayedexpansion
 
 cd /d "%ANDROID_HOME%\emulator" 2>nul || cd /d "%ANDROID_SDK_ROOT%\emulator" 2>nul || (
-    echo Error: Cannot find Android SDK emulator directory
-    exit /b 1
+   echo Error: Cannot find Android SDK emulator directory
+   exit /b 1
 )
 
-emulator.exe -avd %AVD_NAME% -no-boot-anim -gpu host || (
-    echo.
-    echo AVD '%AVD_NAME%' not found. Available AVDs:
-    emulator.exe -list-avds
-    exit /b 1
+echo Available devices:
+set i=0
+for /f "tokens=*" %%a in ('emulator.exe -list-avds') do (
+   set /a i+=1
+   echo  !i!. %%a
 )
+
+set /p selection="Select device (1-%i%): "
+
+set j=0
+for /f "tokens=*" %%a in ('emulator.exe -list-avds') do (
+   set /a j+=1
+   if !j!==!selection! (
+       echo Starting %%a...
+       emulator.exe -avd %%a -no-boot-anim -gpu host
+       exit /b
+   )
+)
+
+echo Invalid selection
