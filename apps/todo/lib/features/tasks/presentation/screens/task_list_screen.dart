@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:todo/features/tasks/providers/task_providers.dart';
-import 'package:todo_core/model/task.dart';
+import 'package:todo_core/models/task.dart';
 
 class TaskListScreen extends ConsumerWidget {
   const TaskListScreen({super.key});

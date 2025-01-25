@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:todo_core/model/task.dart';
+import 'package:todo_core/models/task.dart';
 import 'package:todo_core/repositories/task_repository.dart';
 
 final taskRepositoryProvider = Provider<TaskRepository>((ref) {

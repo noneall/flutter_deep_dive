@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/apps/todo/melos_todo.iml" filepath="$PROJECT_DIR$/apps/todo/melos_todo.iml" />
       <module fileurl="file://$PROJECT_DIR$/packages/todo_core/melos_todo_core.iml" filepath="$PROJECT_DIR$/packages/todo_core/melos_todo_core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/packages/todo_ui/melos_todo_ui.iml" filepath="$PROJECT_DIR$/packages/todo_ui/melos_todo_ui.iml" />
       <module fileurl="file://$PROJECT_DIR$/melos_flutter_deep_dive.iml" filepath="$PROJECT_DIR$/melos_flutter_deep_dive.iml" />
     </modules>
   </component>
